@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+
+<body >
+
+	<form action="#" th:action = "@{/showgraph}" th:object="${fileName}" method="post">
+		<select class = "form-control" th:field="*{name}" >
+			<option th:each="file : ${fileList}" th:value="${file}"	th:text="${file}"></option>
+		</select> 
+		<input type="submit" name="Show Garaph">
+	</form>
+	
+</body>
+
+</html>
